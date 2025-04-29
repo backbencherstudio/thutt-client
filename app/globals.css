@@ -71,3 +71,13 @@
     width: 100%;
     box-sizing: content-box;
   }
+
+  .leading-paragraph {
+    --tw-leading: var(--paragraph-line-height);
+    line-height: var(--paragraph-line-height);
+  }
+  
+  .leading-heading {
+    --tw-leading: var(--heading-line-height);
+    line-height: var(--heading-line-height);
+  }
