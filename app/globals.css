@@ -1,2 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
 @import "tailwindcss";
 
+:root {
+    --font-work-sans: 'Work Sans', sans-serif;
+    --font-open-sans: 'Open Sans', sans-serif;
+    --brand-color: #2B3DFF;
+    --background-color: #EAECFFB2;
+    --paragraph-color: #474646;
+    --title-color: #1E1D1D;
+    --heading-line-height: 120%;
+    --paragraph-line-height: 180%;
+}
+
+  /* Applying work sans font to .workSans class */
+.workSans {
+    font-family: var(--font-work-sans);
+  }
+  
+  /* Applying open sans font to .openSans class */
+  .openSans {
+    font-family: var(--font-open-sans);
+  }
+  
+  html {
+    -webkit-text-size-adjust: 100%;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  body {
+    font-family: var(--font-open-sans);
+    min-height: 100vh;
+    line-height: var(--paragraph-line-height);
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-work-sans);
+    font-weight: 600;
+    line-height: var(--heading-line-height);
+  }
+  
+  h1 {
+    font-size: clamp(32px, calc(32px + (64 - 32) * ((100vw - 320px) / (1600 - 320))), 64px);
+  }
+  
+  h2 {
+    font-size: clamp(32px, calc(32px + (48 - 32) * ((100vw - 320px) / (1600 - 320))), 48px);
+  }
+  
+  h3 {
+    font-size: clamp(24px, calc(24px + (32 - 24) * ((100vw - 320px) / (1600 - 320))), 32px);
+  }
+  
+  p {
+    font-family: var(--font-open-sans);
+    font-weight: 400;
+    line-height: var(--paragraph-line-height);
+    font-size: 16px;
+  }
+  
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  
+  .container {
+    max-width: 1320px; /* 1170px + 32px (16px padding on each side) */
+    margin: 0 auto;
+    width: 100%;
+    box-sizing: content-box;
+  }
