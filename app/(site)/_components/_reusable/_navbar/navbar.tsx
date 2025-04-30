@@ -5,14 +5,27 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import Image from "next/image";
 import Button from "../_button/button";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 
 // Navigation items
 const navItems = [
   { name: "Home", path: "/" },
-  { name: "About", path: "/about" },
-  { name: "Venue", path: "/venue" },
-  { name: "Event", path: "/events" },
-  { name: "FAQs", path: "/faqs" },
+  { 
+    name: "Category", 
+    path: "/category",
+    dropdownItems: [
+      { name: "Web Development", path: "/category/web-development" },
+      { name: "Mobile Apps", path: "/category/mobile-apps" },
+      { name: "UI/UX Design", path: "/category/ui-ux-design" }
+    ]
+  },
+  { name: "Services", path: "/services" },
+  { name: "Portfolio", path: "/portfolio" },
 ];
 
 export default function Navbar() {
@@ -44,7 +57,7 @@ export default function Navbar() {
   }, [pathname]);
 
   return (
-    <nav className="w-full p-4">
+    <nav className="w-full p-5">
       <div className="container flex items-center justify-between">
         {/* Logo */}
         <div className="flex-shrink-0">
@@ -60,19 +73,59 @@ export default function Navbar() {
         </div>
 
         {/* Desktop Navigation */}
-        <div className="hidden md:flex items-center gap-12">
+        <div className="hidden md:flex items-center gap-9">
           {navItems.map((item) => (
-            <Link
-              key={item.path}
-              href={item.path}
-              className={`text-[18px] leading-[var(--paragraph-line-height)] openSans ${
-                pathname === item.path
-                  ? "text-[#2B3DFF] font-medium"
-                  : "text-[#474646] font-normal"
-              }`}
-            >
-              {item.name}
-            </Link>
+            item.dropdownItems ? (
+              <DropdownMenu key={item.path}>
+                <DropdownMenuTrigger className={`text-[18px] leading-[var(--paragraph-line-height)] openSans flex items-center gap-1 ${
+                  pathname === item.path || item.dropdownItems.some(di => pathname === di.path)
+                    ? "text-[#2B3DFF] font-medium"
+                    : "text-[#474646] font-normal"
+                }`}>
+                  {item.name}
+                  <svg 
+                    xmlns="http://www.w3.org/2000/svg" 
+                    width="16" 
+                    height="16" 
+                    viewBox="0 0 24 24" 
+                    fill="none" 
+                    stroke="currentColor" 
+                    strokeWidth="2" 
+                    strokeLinecap="round" 
+                    strokeLinejoin="round"
+                    className="ml-1"
+                  >
+                    <path d="m6 9 6 6 6-6"/>
+                  </svg>
+                </DropdownMenuTrigger>
+                <DropdownMenuContent>
+                  {item.dropdownItems.map((dropdownItem) => (
+                    <DropdownMenuItem key={dropdownItem.path} asChild>
+                      <Link 
+                        href={dropdownItem.path}
+                        className={`w-full ${
+                          pathname === dropdownItem.path ? "text-[#2B3DFF]" : "text-[#474646]"
+                        }`}
+                      >
+                        {dropdownItem.name}
+                      </Link>
+                    </DropdownMenuItem>
+                  ))}
+                </DropdownMenuContent>
+              </DropdownMenu>
+            ) : (
+              <Link
+                key={item.path}
+                href={item.path}
+                className={`text-[18px] leading-[var(--paragraph-line-height)] openSans ${
+                  pathname === item.path
+                    ? "text-[#2B3DFF] font-medium"
+                    : "text-[#474646] font-normal"
+                }`}
+              >
+                {item.name}
+              </Link>
+            )
           ))}
         </div>
 
@@ -153,21 +206,50 @@ export default function Navbar() {
             </div>
             <div className="flex flex-col space-y-6">
               {navItems.map((item) => (
-                <Link
-                  key={item.path}
-                  href={item.path}
-                  className={`text-[18px] leading-[160%] font-['DM_Sans'] ${
-                    pathname === item.path
-                      ? "text-[#151623] font-medium"
-                      : "text-[#62636C] font-normal"
-                  }`}
-                  onClick={() => setIsOpen(false)}
-                >
-                  {item.name}
-                </Link>
+                <div key={item.path}>
+                  {item.dropdownItems ? (
+                    <div className="flex flex-col space-y-2">
+                      <span className={`text-[18px] leading-[160%] font-['DM_Sans'] ${
+                        pathname === item.path || item.dropdownItems.some(di => pathname === di.path)
+                          ? "text-[#151623] font-medium"
+                          : "text-[#62636C] font-normal"
+                      }`}>
+                        {item.name}
+                      </span>
+                      <div className="pl-4 flex flex-col space-y-2">
+                        {item.dropdownItems.map((dropdownItem) => (
+                          <Link
+                            key={dropdownItem.path}
+                            href={dropdownItem.path}
+                            className={`text-[16px] leading-[160%] font-['DM_Sans'] ${
+                              pathname === dropdownItem.path
+                                ? "text-[#151623] font-medium"
+                                : "text-[#62636C] font-normal"
+                            }`}
+                            onClick={() => setIsOpen(false)}
+                          >
+                            {dropdownItem.name}
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
+                  ) : (
+                    <Link
+                      href={item.path}
+                      className={`text-[18px] leading-[160%] font-['DM_Sans'] ${
+                        pathname === item.path
+                          ? "text-[#151623] font-medium"
+                          : "text-[#62636C] font-normal"
+                      }`}
+                      onClick={() => setIsOpen(false)}
+                    >
+                      {item.name}
+                    </Link>
+                  )}
+                </div>
               ))}
               <div className="pt-4">
-                <Button text="Contact Now" href="/contact" />
+                <Button text="Project Survey" href="/contact" />
               </div>
             </div>
           </div>
