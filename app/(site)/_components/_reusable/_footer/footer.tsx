@@ -4,8 +4,8 @@ import React from "react";
 
 export default function footer() {
   return (
-    <div className="bg-white">
-      <div className="container flex flex-col sm:flex-row sm:flex-wrap items-start justify-between gap-6 px-4 pt-10 sm:pt-16 md:pt-20 pb-10 sm:pb-12">
+    <div className="bg-white px-4">
+      <div className="container flex flex-col sm:flex-row sm:flex-wrap items-start justify-between gap-6 pt-10 sm:pt-16 md:pt-20 pb-10 sm:pb-12">
         <div className="max-w-[378px] flex flex-col items-start justify-start gap-10">
           <div className="flex flex-col items-start gap-6">
             {/* Logo */}
