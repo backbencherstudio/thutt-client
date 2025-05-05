@@ -32,7 +32,8 @@ export default function Category() {
             Find Your Perfect Fit
           </h2>
 
-          <div className="flex gap-6">
+          {/* Desktop Layout */}
+          <div className="hidden md:flex gap-6">
             {panels.map((panel, index) => (
               <div
                 key={index}
@@ -94,6 +95,54 @@ export default function Category() {
                     {panel.description}
                   </p>
                   <Link href="/" className="flex items-center gap-2 text-[#5564FF]">
+                    Explore
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="14"
+                      height="14"
+                      viewBox="0 0 14 14"
+                      fill="none"
+                    >
+                      <path
+                        d="M12 2L1 13"
+                        stroke="#5564FF"
+                        strokeWidth="1.5"
+                        strokeLinecap="round"
+                      />
+                      <path
+                        d="M6 1H12C12.4714 1 12.7071 1 12.8536 1.14645C13 1.29289 13 1.5286 13 2V8"
+                        stroke="#5564FF"
+                        strokeWidth="1.5"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                    </svg>
+                  </Link>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Tablet & Mobile Layout */}
+          <div className="md:hidden flex flex-col gap-6">
+            {panels.map((panel, index) => (
+              <div
+                key={index}
+                className={`relative overflow-hidden bg-cover bg-center bg-no-repeat transition-all duration-500 ease-in-out cursor-pointer w-full h-[400px] sm:h-[500px]`}
+                style={{
+                  background: `linear-gradient(180deg, rgba(0, 0, 0, 0.00) 57.5%, rgba(0, 0, 0, 0.40) 79.28%), ${panel.image} lightgray 50% / cover no-repeat`,
+                }}
+                onClick={() => setActivePanel(index)}
+              >
+                {/* Content for mobile/tablet */}
+                <div className="absolute inset-0 flex flex-col items-start justify-end p-4 sm:p-6 gap-2">
+                  <h3 className="text-white text-2xl sm:text-[32px] font-medium">
+                    {panel.title}
+                  </h3>
+                  <p className="text-white text-sm sm:text-base max-w-full sm:max-w-[533px] pb-1">
+                    {panel.description}
+                  </p>
+                  <Link href="/" className="flex items-center gap-2 text-[#5564FF] text-sm sm:text-base">
                     Explore
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
