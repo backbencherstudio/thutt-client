@@ -13,6 +13,10 @@ import Image from "next/image";
 
 export default function newCubicles() {
   const [cubicles, setCubicles] = useState([]);
+  const [page, setPage] = useState(1);
+  const perPage = 6;
+  const totalPages = Math.ceil(cubicles.length / perPage);
+  const paginatedCubicles = cubicles.slice((page - 1) * perPage, page * perPage);
 
   useEffect(() => {
     fetch("/products.json")
@@ -94,7 +98,7 @@ export default function newCubicles() {
             </div>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {cubicles.map((cubicle) => (
+            {paginatedCubicles.map((cubicle) => (
               <div className="w-full" key={cubicle.id}>
                 <Image
                   src={cubicle.image}
@@ -135,6 +139,32 @@ export default function newCubicles() {
                 </p>
               </div>
             ))}
+          </div>
+          {/* Pagination */}
+          <div className="flex items-center justify-center gap-2 mt-8">
+            <button
+              onClick={() => setPage((p) => Math.max(1, p - 1))}
+              disabled={page === 1}
+              className={`px-6 py-3 border border-[#1A1AFF] rounded transition-all text-[#1A1AFF] bg-white text-base font-normal flex items-center gap-2 ${page === 1 ? 'opacity-50 cursor-not-allowed' : 'hover:bg-[#f0f3ff]'}`}
+            >
+              <span>&lt;</span> Back
+            </button>
+            {Array.from({ length: totalPages }).map((_, i) => (
+              <button
+                key={i}
+                onClick={() => setPage(i + 1)}
+                className={`w-14 h-12 border border-[#1A1AFF] rounded transition-all text-base font-normal flex items-center justify-center ${page === i + 1 ? 'bg-[#1A1AFF] text-white' : 'bg-white text-[#1A1AFF] hover:bg-[#f0f3ff]'}`}
+              >
+                {i + 1}
+              </button>
+            ))}
+            <button
+              onClick={() => setPage((p) => Math.min(totalPages, p + 1))}
+              disabled={page === totalPages}
+              className={`px-6 py-3 rounded transition-all text-white bg-[#2B3DFF] text-base font-normal flex items-center gap-2 ${page === totalPages ? 'opacity-50 cursor-not-allowed' : 'hover:bg-[#f0f3ff]'}`}
+            >
+              Next <span>&gt;</span>
+            </button>
           </div>
         </div>
       </div>
