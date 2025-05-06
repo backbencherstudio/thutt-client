@@ -19,9 +19,9 @@ const navItems = [
     name: "Category", 
     path: "/category",
     dropdownItems: [
-      { name: "Web Development", path: "/category/web-development" },
-      { name: "Mobile Apps", path: "/category/mobile-apps" },
-      { name: "UI/UX Design", path: "/category/ui-ux-design" }
+      { name: "New Cubicles", path: "/category/new-cubicles" },
+      { name: "Pre-Owned Cubicles", path: "/category/pre-owned-cubicles" },
+      { name: "Office Furniture", path: "/category/office-furniture" },
     ]
   },
   { name: "Services", path: "/services" },

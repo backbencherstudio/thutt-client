@@ -1,0 +1,272 @@
+{
+  "New Cubicle": [
+    {
+      "id": "new-1",
+      "name": "Modern Workstation Cubicle",
+      "rating": 5,
+      "price": "$450",
+      "stock": 5,
+      "image": "/assets/products/new/new-cubicle-1.png"
+    },
+    {
+      "id": "new-2",
+      "name": "Executive Cubicle Suite",
+      "rating": 4,
+      "price": "$600",
+      "stock": 2,
+      "image": "/assets/products/new/new-cubicle-2.png"
+    },
+    {
+      "id": "new-3",
+      "name": "Compact Office Cubicle",
+      "rating": 4,
+      "price": "$350",
+      "stock": 8,
+      "image": "/assets/products/new/new-cubicle-3.png"
+    },
+    {
+      "id": "new-4",
+      "name": "Premium Glass Cubicle",
+      "rating": 5,
+      "price": "$700",
+      "stock": 3,
+      "image": "/assets/products/new/new-cubicle-4.png"
+    },
+    {
+      "id": "new-5",
+      "name": "Collaborative Cubicle Pod",
+      "rating": 4,
+      "price": "$520",
+      "stock": 6,
+      "image": "/assets/products/new/new-cubicle-5.png"
+    },
+    {
+      "id": "new-6",
+      "name": "Minimalist Cubicle",
+      "rating": 5,
+      "price": "$400",
+      "stock": 4,
+      "image": "/assets/products/new/new-cubicle-6.png"
+    },
+    {
+      "id": "new-7",
+      "name": "Open Plan Cubicle",
+      "rating": 4,
+      "price": "$480",
+      "stock": 7,
+      "image": "/assets/products/new/new-cubicle-7.png"
+    },
+    {
+      "id": "new-8",
+      "name": "Deluxe Privacy Cubicle",
+      "rating": 5,
+      "price": "$750",
+      "stock": 2,
+      "image": "/assets/products/new/new-cubicle-8.png"
+    },
+    {
+      "id": "new-9",
+      "name": "Eco-Friendly Cubicle",
+      "rating": 4,
+      "price": "$390",
+      "stock": 5,
+      "image": "/assets/products/new/new-cubicle-9.png"
+    },
+    {
+      "id": "new-10",
+      "name": "Tech-Integrated Cubicle",
+      "rating": 5,
+      "price": "$820",
+      "stock": 1,
+      "image": "/assets/products/new/new-cubicle-10.png"
+    },
+    {
+      "id": "new-11",
+      "name": "Classic Panel Cubicle",
+      "rating": 4,
+      "price": "$410",
+      "stock": 6,
+      "image": "/assets/products/new/new-cubicle-11.png"
+    },
+    {
+      "id": "new-12",
+      "name": "Space Saver Cubicle",
+      "rating": 5,
+      "price": "$370",
+      "stock": 9,
+      "image": "/assets/products/new/new-cubicle-12.png"
+    }
+  ],
+  "Pre-Owned Cubicle": [
+    {
+      "id": "preowned-1",
+      "name": "Refurbished Team Cubicle",
+      "rating": 4,
+      "price": "$230",
+      "stock": 3,
+      "image": "/assets/products/preowned/preowned-cubicle-1.png"
+    },
+    {
+      "id": "preowned-2",
+      "name": "Classic Office Cubicle",
+      "rating": 5,
+      "price": "$280",
+      "stock": 4,
+      "image": "/assets/products/preowned/preowned-cubicle-2.png"
+    },
+    {
+      "id": "preowned-3",
+      "name": "Budget Cubicle Set",
+      "rating": 3,
+      "price": "$180",
+      "stock": 6,
+      "image": "/assets/products/preowned/preowned-cubicle-3.png"
+    },
+    {
+      "id": "preowned-4",
+      "name": "Pre-Owned Executive Cubicle",
+      "rating": 4,
+      "price": "$260",
+      "stock": 2,
+      "image": "/assets/products/preowned/preowned-cubicle-4.png"
+    },
+    {
+      "id": "preowned-5",
+      "name": "Used Glass Panel Cubicle",
+      "rating": 5,
+      "price": "$310",
+      "stock": 3,
+      "image": "/assets/products/preowned/preowned-cubicle-5.png"
+    },
+    {
+      "id": "preowned-6",
+      "name": "Secondhand Privacy Cubicle",
+      "rating": 4,
+      "price": "$200",
+      "stock": 5,
+      "image": "/assets/products/preowned/preowned-cubicle-6.png"
+    },
+    {
+      "id": "preowned-7",
+      "name": "Affordable Cubicle Pod",
+      "rating": 3,
+      "price": "$150",
+      "stock": 7,
+      "image": "/assets/products/preowned/preowned-cubicle-7.png"
+    },
+    {
+      "id": "preowned-8",
+      "name": "Reconditioned Workstation",
+      "rating": 4,
+      "price": "$220",
+      "stock": 4,
+      "image": "/assets/products/preowned/preowned-cubicle-8.png"
+    },
+    {
+      "id": "preowned-9",
+      "name": "Pre-Owned Minimalist Cubicle",
+      "rating": 5,
+      "price": "$270",
+      "stock": 2,
+      "image": "/assets/products/preowned/preowned-cubicle-9.png"
+    },
+    {
+      "id": "preowned-10",
+      "name": "Used Open Plan Cubicle",
+      "rating": 4,
+      "price": "$210",
+      "stock": 6,
+      "image": "/assets/products/preowned/preowned-cubicle-10.png"
+    },
+    {
+      "id": "preowned-11",
+      "name": "Classic Panel Pre-Owned",
+      "rating": 3,
+      "price": "$190",
+      "stock": 8,
+      "image": "/assets/products/preowned/preowned-cubicle-11.png"
+    },
+    {
+      "id": "preowned-12",
+      "name": "Eco Pre-Owned Cubicle",
+      "rating": 4,
+      "price": "$240",
+      "stock": 5,
+      "image": "/assets/products/preowned/preowned-cubicle-12.png"
+    }
+  ],
+  "Office Furniture": [
+    {
+      "id": "furniture-1",
+      "name": "Ergonomic Office Chair",
+      "rating": 5,
+      "price": "$120",
+      "stock": 10,
+      "image": "/assets/products/office/office-furniture-1.png"
+    },
+    {
+      "id": "furniture-2",
+      "name": "Adjustable Standing Desk",
+      "rating": 4,
+      "price": "$320",
+      "stock": 7,
+      "image": "/assets/products/office/office-furniture-2.png"
+    },
+    {
+      "id": "furniture-3",
+      "name": "Filing Cabinet",
+      "rating": 4,
+      "price": "$90",
+      "stock": 12,
+      "image": "/assets/products/office/office-furniture-3.png"
+    },
+    {
+      "id": "furniture-4",
+      "name": "Mobile Pedestal Drawer",
+      "rating": 5,
+      "price": "$110",
+      "stock": 8,
+      "image": "/assets/products/office/office-furniture-4.png"
+    },
+    {
+      "id": "furniture-5",
+      "name": "Conference Table",
+      "rating": 4,
+      "price": "$500",
+      "stock": 2,
+      "image": "/assets/products/office/office-furniture-5.png"
+    },
+    {
+      "id": "furniture-6",
+      "name": "Visitor Chair",
+      "rating": 4,
+      "price": "$70",
+      "stock": 15,
+      "image": "/assets/products/office/office-furniture-6.png"
+    },
+    {
+      "id": "furniture-7",
+      "name": "Bookshelf",
+      "rating": 5,
+      "price": "$150",
+      "stock": 6,
+      "image": "/assets/products/office/office-furniture-7.png"
+    },
+    {
+      "id": "furniture-8",
+      "name": "Reception Desk",
+      "rating": 4,
+      "price": "$420",
+      "stock": 3,
+      "image": "/assets/products/office/office-furniture-8.png"
+    },
+    {
+      "id": "furniture-9",
+      "name": "Lounge Sofa",
+      "rating": 5,
+      "price": "$350",
+      "stock": 4,
+      "image": "/assets/products/office/office-furniture-9.png"
+    }
+  ]
+}
