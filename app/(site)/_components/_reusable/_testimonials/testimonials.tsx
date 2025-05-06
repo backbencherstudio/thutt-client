@@ -7,7 +7,7 @@ const testimonialsData = [
   {
     quote: "A seamless experience that exceeded expectations.",
     content:
-      "From start to finish, the team was incredible. They helped us plan a functional office layout, delivered everything on time, and the installation was seamless. Our team loves the new space!",
+      "From start to finish, the team was incredible. They helped us plan a functional office layout with a great team, delivered everything on time, and the installation was seamless. Our team loves the new space!",
     name: "Sarah L.",
     role: "Office Manager at BrightPath Solutions",
     image: "/assets/site-images/home/testimonial.png",
@@ -15,7 +15,7 @@ const testimonialsData = [
   {
     quote: "Truly transformed our workspace easily and efficiently.",
     content:
-      "The transformation of our workspace was outstanding. The team listened to our needs, designed a beautiful and practical office, and managed every detail with care. The process was smooth, and the results have truly elevated our work environment.",
+      "The transformation of our workspace was outstanding. The team listened to our needs, designed a beautiful, and managed every detail. The process was smooth, and the results have truly elevated our work environment.",
     name: "Mark D.",
     role: "Founder of VisionWare",
     image: "/assets/site-images/home/cta.png",
@@ -23,7 +23,7 @@ const testimonialsData = [
   {
     quote: "Professional, timely, and creative with a great team.",
     content:
-      "We were impressed by their professionalism and creativity. Every step, from planning to installation, was handled efficiently. The new office has boosted our team's morale and productivity, and we couldn't be happier with the outcome.",
+      "We were impressed by their professionalism and creativity. Every step, from planning to installation. The new office has boosted our team's morale and productivity, and we couldn't be happier with the outcome.",
     name: "Rachel K.",
     role: "HR Lead at SynapseTech",
     image: "/assets/site-images/home/portfolio1.png",
