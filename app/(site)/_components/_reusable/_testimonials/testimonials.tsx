@@ -52,6 +52,7 @@ export default function Testimonials() {
               alt="Office space"
               width={640}
               height={480}
+              className="w-full md:w-1/2 xl:w-[640px]"
             />
             <div className="md:w-1/2 w-full xl:w-[560px] flex flex-col justify-center">
               <div className="text-xl md:text-2xl font-bold mb-3 text-[#1E1D1D]">
@@ -104,14 +105,14 @@ export default function Testimonials() {
                       <path
                         d="M1.99976 6L16.9998 5.99976"
                         stroke="#9DA6FF"
-                        stroke-width="1.5"
+                        strokeWidth="1.5"
                         stroke-linecap="round"
                         stroke-linejoin="round"
                       />
                       <path
                         d="M5.99976 1L1.70686 5.29289C1.37353 5.62623 1.20686 5.79289 1.20686 6C1.20686 6.20711 1.37353 6.37377 1.70686 6.70711L5.99976 11"
                         stroke="#9DA6FF"
-                        stroke-width="1.5"
+                        strokeWidth="1.5"
                         stroke-linecap="round"
                         stroke-linejoin="round"
                       />
@@ -131,14 +132,14 @@ export default function Testimonials() {
                       <path
                         d="M16.0002 6L1.00024 6"
                         stroke="#2B3DFF"
-                        stroke-width="1.5"
+                        strokeWidth="1.5"
                         stroke-linecap="round"
                         stroke-linejoin="round"
                       />
                       <path
                         d="M12 1L16.2929 5.29289C16.6262 5.62623 16.7929 5.79289 16.7929 6C16.7929 6.20711 16.6262 6.37377 16.2929 6.70711L12 11"
                         stroke="#2B3DFF"
-                        stroke-width="1.5"
+                        strokeWidth="1.5"
                         stroke-linecap="round"
                         stroke-linejoin="round"
                       />
@@ -156,7 +157,7 @@ export default function Testimonials() {
                         opacity="0.4"
                         d="M1 1L34 34"
                         stroke="#9DA6FF"
-                        stroke-width="1.5"
+                        strokeWidth="1.5"
                       />
                     </svg>
                   </div>
