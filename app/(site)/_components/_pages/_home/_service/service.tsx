@@ -45,9 +45,9 @@ export default function Service() {
   const [activeItem, setActiveItem] = useState('item-0');
 
   return (
-    <div className="bg-white">
-      <div className="container mx-auto px-4 py-12">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
+    <div className="bg-white px-4">
+      <div className="container mx-auto py-10 sm:py-16 md:py-20 xl:py-[120px] flex flex-col gap-12">
+        <h2 className="text-center text-[#1E1D1D]">
           From Idea to Installation
         </h2>
 
@@ -69,12 +69,12 @@ export default function Service() {
                   }`}
                 >
                   <div
-                    className="flex flex-col md:flex-row w-full cursor-pointer"
+                    className="flex flex-col-reverse md:flex-row w-full cursor-pointer"
                     onClick={() => setActiveItem(isOpen ? '' : id)}
                   >
-                    <div className="flex-1 px-6 py-6 md:py-8 xl:py-12 flex flex-col justify-center gap-4 transition-all duration-500">
+                    <div className="flex-1 px-4 py-6 md:px-6 md:py-8 xl:py-12 flex flex-col justify-center gap-4 transition-all duration-500">
                       <div className="flex items-start justify-between w-full">
-                        <h3 className="font-semibold text-[#1E1D1D]">
+                        <h3 className="font-semibold text-[#1E1D1D] text-base md:text-lg">
                           {service.title}
                         </h3>
                         {!isOpen && (
@@ -111,7 +111,7 @@ export default function Service() {
 
                       {isOpen && (
                         <>
-                          <p className="max-w-[533px] text-[#474646]">
+                          <p className="max-w-[533px] text-[#474646] text-sm md:text-base">
                             {service.description}
                           </p>
                           <Link
@@ -147,11 +147,11 @@ export default function Service() {
                     </div>
 
                     {isOpen && service.image && (
-                      <div className="w-full md:w-[360px] h-full transition-opacity duration-500 ease-in-out">
+                      <div className="w-full md:w-[360px] transition-opacity duration-500 ease-in-out">
                         <img
                           src={service.image}
                           alt={service.title}
-                          className="w-full h-full object-cover"
+                          className="w-full h-full max-h-[240px] md:max-h-none object-cover"
                         />
                       </div>
                     )}
