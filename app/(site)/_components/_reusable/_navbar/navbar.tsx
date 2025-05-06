@@ -114,17 +114,17 @@ export default function Navbar() {
                 </DropdownMenuContent>
               </DropdownMenu>
             ) : (
-              <Link
-                key={item.path}
-                href={item.path}
-                className={`text-[18px] leading-[var(--paragraph-line-height)] openSans ${
-                  pathname === item.path
+            <Link
+              key={item.path}
+              href={item.path}
+              className={`text-[18px] leading-[var(--paragraph-line-height)] openSans ${
+                pathname === item.path
                     ? "text-[#2B3DFF] font-medium"
                     : "text-[#474646] font-normal"
-                }`}
-              >
-                {item.name}
-              </Link>
+              }`}
+            >
+              {item.name}
+            </Link>
             )
           ))}
         </div>
@@ -234,17 +234,17 @@ export default function Navbar() {
                       </div>
                     </div>
                   ) : (
-                    <Link
-                      href={item.path}
-                      className={`text-[18px] leading-[160%] font-['DM_Sans'] ${
-                        pathname === item.path
-                          ? "text-[#151623] font-medium"
-                          : "text-[#62636C] font-normal"
-                      }`}
-                      onClick={() => setIsOpen(false)}
-                    >
-                      {item.name}
-                    </Link>
+                <Link
+                  href={item.path}
+                  className={`text-[18px] leading-[160%] font-['DM_Sans'] ${
+                    pathname === item.path
+                      ? "text-[#151623] font-medium"
+                      : "text-[#62636C] font-normal"
+                  }`}
+                  onClick={() => setIsOpen(false)}
+                >
+                  {item.name}
+                </Link>
                   )}
                 </div>
               ))}
