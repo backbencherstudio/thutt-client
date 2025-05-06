@@ -6,7 +6,7 @@
       "rating": 5,
       "price": "$450",
       "stock": 5,
-      "image": "/assets/products/new/new-cubicle-1.png"
+      "image": "/assets/site-images/products/new/new-cubicle-1.png"
     },
     {
       "id": "new-2",
@@ -14,7 +14,7 @@
       "rating": 4,
       "price": "$600",
       "stock": 2,
-      "image": "/assets/products/new/new-cubicle-2.png"
+      "image": "/assets/site-images/products/new/new-cubicle-2.png"
     },
     {
       "id": "new-3",
@@ -22,7 +22,7 @@
       "rating": 4,
       "price": "$350",
       "stock": 8,
-      "image": "/assets/products/new/new-cubicle-3.png"
+      "image": "/assets/site-images/products/new/new-cubicle-3.png"
     },
     {
       "id": "new-4",
@@ -30,7 +30,7 @@
       "rating": 5,
       "price": "$700",
       "stock": 3,
-      "image": "/assets/products/new/new-cubicle-4.png"
+      "image": "/assets/site-images/products/new/new-cubicle-4.png"
     },
     {
       "id": "new-5",
@@ -38,7 +38,7 @@
       "rating": 4,
       "price": "$520",
       "stock": 6,
-      "image": "/assets/products/new/new-cubicle-5.png"
+      "image": "/assets/site-images/products/new/new-cubicle-5.png"
     },
     {
       "id": "new-6",
@@ -46,7 +46,7 @@
       "rating": 5,
       "price": "$400",
       "stock": 4,
-      "image": "/assets/products/new/new-cubicle-6.png"
+      "image": "/assets/site-images/products/new/new-cubicle-6.png"
     },
     {
       "id": "new-7",
@@ -54,7 +54,7 @@
       "rating": 4,
       "price": "$480",
       "stock": 7,
-      "image": "/assets/products/new/new-cubicle-7.png"
+      "image": "/assets/site-images/products/new/new-cubicle-7.png"
     },
     {
       "id": "new-8",
@@ -62,7 +62,7 @@
       "rating": 5,
       "price": "$750",
       "stock": 2,
-      "image": "/assets/products/new/new-cubicle-8.png"
+      "image": "/assets/site-images/products/new/new-cubicle-8.png"
     },
     {
       "id": "new-9",
@@ -70,7 +70,7 @@
       "rating": 4,
       "price": "$390",
       "stock": 5,
-      "image": "/assets/products/new/new-cubicle-9.png"
+      "image": "/assets/site-images/products/new/new-cubicle-9.png"
     },
     {
       "id": "new-10",
@@ -78,7 +78,7 @@
       "rating": 5,
       "price": "$820",
       "stock": 1,
-      "image": "/assets/products/new/new-cubicle-10.png"
+      "image": "/assets/site-images/products/new/new-cubicle-10.png"
     },
     {
       "id": "new-11",
@@ -86,7 +86,7 @@
       "rating": 4,
       "price": "$410",
       "stock": 6,
-      "image": "/assets/products/new/new-cubicle-11.png"
+      "image": "/assets/site-images/products/new/new-cubicle-11.png"
     },
     {
       "id": "new-12",
@@ -94,7 +94,7 @@
       "rating": 5,
       "price": "$370",
       "stock": 9,
-      "image": "/assets/products/new/new-cubicle-12.png"
+      "image": "/assets/site-images/products/new/new-cubicle-12.png"
     }
   ],
   "Pre-Owned Cubicle": [
@@ -104,7 +104,7 @@
       "rating": 4,
       "price": "$230",
       "stock": 3,
-      "image": "/assets/products/preowned/preowned-cubicle-1.png"
+      "image": "/assets/site-images/products/preowned/preowned-cubicle-1.png"
     },
     {
       "id": "preowned-2",
@@ -112,7 +112,7 @@
       "rating": 5,
       "price": "$280",
       "stock": 4,
-      "image": "/assets/products/preowned/preowned-cubicle-2.png"
+      "image": "/assets/site-images/products/preowned/preowned-cubicle-2.png"
     },
     {
       "id": "preowned-3",
@@ -120,7 +120,7 @@
       "rating": 3,
       "price": "$180",
       "stock": 6,
-      "image": "/assets/products/preowned/preowned-cubicle-3.png"
+      "image": "/assets/site-images/products/preowned/preowned-cubicle-3.png"
     },
     {
       "id": "preowned-4",
@@ -128,7 +128,7 @@
       "rating": 4,
       "price": "$260",
       "stock": 2,
-      "image": "/assets/products/preowned/preowned-cubicle-4.png"
+      "image": "/assets/site-images/products/preowned/preowned-cubicle-4.png"
     },
     {
       "id": "preowned-5",
@@ -136,7 +136,7 @@
       "rating": 5,
       "price": "$310",
       "stock": 3,
-      "image": "/assets/products/preowned/preowned-cubicle-5.png"
+      "image": "/assets/site-images/products/preowned/preowned-cubicle-5.png"
     },
     {
       "id": "preowned-6",
@@ -144,7 +144,7 @@
       "rating": 4,
       "price": "$200",
       "stock": 5,
-      "image": "/assets/products/preowned/preowned-cubicle-6.png"
+      "image": "/assets/site-images/products/preowned/preowned-cubicle-6.png"
     },
     {
       "id": "preowned-7",
@@ -152,7 +152,7 @@
       "rating": 3,
       "price": "$150",
       "stock": 7,
-      "image": "/assets/products/preowned/preowned-cubicle-7.png"
+      "image": "/assets/site-images/products/preowned/preowned-cubicle-7.png"
     },
     {
       "id": "preowned-8",
@@ -160,7 +160,7 @@
       "rating": 4,
       "price": "$220",
       "stock": 4,
-      "image": "/assets/products/preowned/preowned-cubicle-8.png"
+      "image": "/assets/site-images/products/preowned/preowned-cubicle-8.png"
     },
     {
       "id": "preowned-9",
@@ -168,7 +168,7 @@
       "rating": 5,
       "price": "$270",
       "stock": 2,
-      "image": "/assets/products/preowned/preowned-cubicle-9.png"
+      "image": "/assets/site-images/products/preowned/preowned-cubicle-9.png"
     },
     {
       "id": "preowned-10",
@@ -176,7 +176,7 @@
       "rating": 4,
       "price": "$210",
       "stock": 6,
-      "image": "/assets/products/preowned/preowned-cubicle-10.png"
+      "image": "/assets/site-images/products/preowned/preowned-cubicle-10.png"
     },
     {
       "id": "preowned-11",
@@ -184,7 +184,7 @@
       "rating": 3,
       "price": "$190",
       "stock": 8,
-      "image": "/assets/products/preowned/preowned-cubicle-11.png"
+      "image": "/assets/site-images/products/preowned/preowned-cubicle-11.png"
     },
     {
       "id": "preowned-12",
@@ -192,7 +192,7 @@
       "rating": 4,
       "price": "$240",
       "stock": 5,
-      "image": "/assets/products/preowned/preowned-cubicle-12.png"
+      "image": "/assets/site-images/products/preowned/preowned-cubicle-12.png"
     }
   ],
   "Office Furniture": [
@@ -202,7 +202,7 @@
       "rating": 5,
       "price": "$120",
       "stock": 10,
-      "image": "/assets/products/office/office-furniture-1.png"
+      "image": "/assets/site-images/products/office/office-furniture-1.png"
     },
     {
       "id": "furniture-2",
@@ -210,7 +210,7 @@
       "rating": 4,
       "price": "$320",
       "stock": 7,
-      "image": "/assets/products/office/office-furniture-2.png"
+      "image": "/assets/site-images/products/office/office-furniture-2.png"
     },
     {
       "id": "furniture-3",
@@ -218,7 +218,7 @@
       "rating": 4,
       "price": "$90",
       "stock": 12,
-      "image": "/assets/products/office/office-furniture-3.png"
+      "image": "/assets/site-images/products/office/office-furniture-3.png"
     },
     {
       "id": "furniture-4",
@@ -226,7 +226,7 @@
       "rating": 5,
       "price": "$110",
       "stock": 8,
-      "image": "/assets/products/office/office-furniture-4.png"
+      "image": "/assets/site-images/products/office/office-furniture-4.png"
     },
     {
       "id": "furniture-5",
@@ -234,7 +234,7 @@
       "rating": 4,
       "price": "$500",
       "stock": 2,
-      "image": "/assets/products/office/office-furniture-5.png"
+      "image": "/assets/site-images/products/office/office-furniture-5.png"
     },
     {
       "id": "furniture-6",
@@ -242,7 +242,7 @@
       "rating": 4,
       "price": "$70",
       "stock": 15,
-      "image": "/assets/products/office/office-furniture-6.png"
+      "image": "/assets/site-images/products/office/office-furniture-6.png"
     },
     {
       "id": "furniture-7",
@@ -250,7 +250,7 @@
       "rating": 5,
       "price": "$150",
       "stock": 6,
-      "image": "/assets/products/office/office-furniture-7.png"
+      "image": "/assets/site-images/products/office/office-furniture-7.png"
     },
     {
       "id": "furniture-8",
@@ -258,7 +258,7 @@
       "rating": 4,
       "price": "$420",
       "stock": 3,
-      "image": "/assets/products/office/office-furniture-8.png"
+      "image": "/assets/site-images/products/office/office-furniture-8.png"
     },
     {
       "id": "furniture-9",
@@ -266,7 +266,7 @@
       "rating": 5,
       "price": "$350",
       "stock": 4,
-      "image": "/assets/products/office/office-furniture-9.png"
+      "image": "/assets/site-images/products/office/office-furniture-9.png"
     }
   ]
 }
