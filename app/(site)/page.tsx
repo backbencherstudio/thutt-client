@@ -4,6 +4,7 @@ import Category from "./_components/_pages/_home/_category/category";
 import Service from "./_components/_pages/_home/_service/service";
 import Portfolio from "./_components/_pages/_home/_portfolio/portfolio";
 import CTA from "./_components/_reusable/_cta/cta";
+import Testimonials from "./_components/_reusable/_testimonials/testimonials";
 export default function Home() {
   return (
     <div>
@@ -13,6 +14,7 @@ export default function Home() {
       <Service />
       <Portfolio />
       <CTA />
+      <Testimonials />
     </div>
   );
 }
