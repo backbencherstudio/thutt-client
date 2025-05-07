@@ -4,7 +4,7 @@ import Banner from "../../_components/_pages/_preowned-cubicles/_banner/banner";
 import Feature from "../../_components/_pages/_preowned-cubicles/_feature/feature";
 import PreownedCubicles from "../../_components/_pages/_preowned-cubicles/_cubicles/preownedCubicles";
 import WhyChooseUs from "../../_components/_pages/_preowned-cubicles/_why-choose-us/whyChooseUs";
-export default function Home() {
+export default function PreOwnedCubicles() {
   return (
     <div>
       <Banner />
