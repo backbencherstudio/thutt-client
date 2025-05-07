@@ -52,8 +52,6 @@ export default function preownedCubicles() {
     setPage(1);
   }, [search, filter]);
 
-  console.log(cubicles);
-
   return (
     <div className="bg-white px-4">
       <div className="container mx-auto py-10 sm:py-16 md:py-20 xl:py-[120px] flex flex-col gap-12">
