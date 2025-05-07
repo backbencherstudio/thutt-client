@@ -16,17 +16,14 @@ export default function Banner() {
               Home/
             </div>
             <div className="text-[#BDC3FF] text-[20px] md:text-[24px]">
-              Category/
-            </div>
-            <div className="text-white text-[20px] md:text-[24px]">
-              Office Furniture
+              Service
             </div>
           </div>
-          <h1 className="text-white">Design Your Office with Comfort</h1>
-          <p className="text-white text-[20px] font-medium mb-8">
-            Explore modular, ergonomic solutions built for collaboration,
-            privacy, and peak productivity.
-          </p>
+          <h1 className="text-white">Custom Furniture & Interior Services</h1>
+          <div className="text-white text-[20px] md:text-[24px] font-medium mb-8 leading-[120%]">
+            From made-to-measure pieces to full-space solutions – discover how
+            we bring your vision to life.
+          </div>
         </div>
       </div>
     </div>

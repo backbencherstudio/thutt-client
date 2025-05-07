@@ -23,10 +23,10 @@ export default function Banner() {
             </div>
           </div>
           <h1 className="text-white">Design Your Office with Comfort</h1>
-          <p className="text-white text-[20px] font-medium mb-8">
+          <div className="text-white text-[20px] md:text-[24px] font-medium mb-8 leading-[120%]">
             Explore modular, ergonomic solutions built for collaboration,
             privacy, and peak productivity.
-          </p>
+          </div>
         </div>
       </div>
     </div>
