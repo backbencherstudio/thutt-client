@@ -8,7 +8,7 @@ export default function whyChooseUs() {
           <h2 className="max-w-[644px] text-[#1E1D1D] text-left">
             Why Choose Us for Your Office Cubicles?
           </h2>
-          <div className="flex flex-wrap-reverse items-start justify-between gap-10">
+          <div className="flex flex-wrap-reverse items-end justify-between gap-10">
             <div className="w-full sm:max-w-[644px] flex flex-row flex-wrap gap-8">
               <Image
                 src="/assets/site-images/new-page/choose1.png"

@@ -8,7 +8,7 @@ export default function feature() {
           <h2 className="text-[#1E1D1D] text-center text-2xl md:text-4xl font-semibold">
             Built to Fit Your Space and Team
           </h2>
-          <div className="flex flex-wrap items-center justify-center gap-6 md:gap-8">
+          <div className="flex flex-wrap items-center justify-center sm:justify-between gap-6 md:gap-8">
             <div className="max-w-[237px] flex flex-col gap-4 items-center justify-center">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
