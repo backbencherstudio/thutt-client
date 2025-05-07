@@ -4,7 +4,7 @@ import Banner from "../../_components/_pages/_office-furniture/_banner/banner";
 import Feature from "../../_components/_pages/_office-furniture/_feature/feature";
 import PreownedCubicles from "../../_components/_pages/_office-furniture/_cubicles/preownedCubicles";
 import WhyChooseUs from "../../_components/_pages/_office-furniture/_why-choose-us/whyChooseUs";
-export default function Home() {
+export default function OfficeFurniture() {
   return (
     <div>
       <Banner />

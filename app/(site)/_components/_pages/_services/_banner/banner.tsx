@@ -6,7 +6,7 @@ export default function Banner() {
     <div
       className="bg-cover bg-center bg-no-repeat relative px-4"
       style={{
-        backgroundImage: "url('/assets/site-images/preowned/banner.png')",
+        backgroundImage: "url('/assets/site-images/services/banner.png')",
       }}
     >
       <div className="container mx-auto pt-20 pb-[132px]">
@@ -16,18 +16,13 @@ export default function Banner() {
               Home/
             </div>
             <div className="text-[#BDC3FF] text-[20px] md:text-[24px]">
-              Category/
-            </div>
-            <div className="text-white text-[20px] md:text-[24px]">
-              New Cubicles
+              Service
             </div>
           </div>
-          <h1 className="text-white">
-            Smart Cubicles Tailored for Modern Teams
-          </h1>
+          <h1 className="text-white">Custom Furniture & Interior Services</h1>
           <div className="text-white text-[20px] md:text-[24px] font-medium mb-8 leading-[120%]">
-            Explore modular, ergonomic solutions built for collaboration,
-            privacy, and peak productivity.
+            From made-to-measure pieces to full-space solutions – discover how
+            we bring your vision to life.
           </div>
         </div>
       </div>
