@@ -4,6 +4,7 @@ import WhyChooseUs from "../_components/_pages/_services/_why-choose-us/whyChoos
 import CardOne from "../_components/_pages/_services/_service-cards/_card-one/cardOne";
 import CardTwo from "../_components/_pages/_services/_service-cards/_card-two/cardTwo";
 import CardThree from "../_components/_pages/_services/_service-cards/_card-three/cardThree";
+import CardFour from "../_components/_pages/_services/_service-cards/_card-four/cardFour";
 export default function Services() {
   return (
     <div>
@@ -12,6 +13,7 @@ export default function Services() {
         <CardOne />
         <CardTwo />
         <CardThree />
+        <CardFour />
       </div>
       <WhyChooseUs />
       <CTA />
