@@ -2,6 +2,7 @@ import Banner from "../_components/_pages/_portfolio/_banner/banner";
 import CardsOne from "../_components/_pages/_portfolio/_project-cards/_card-one/cardOne";
 import CardTwo from "../_components/_pages/_portfolio/_project-cards/_card-two/cardTwo";
 import CardThree from "../_components/_pages/_portfolio/_project-cards/_card-three/cardThree";
+import CardFour from "../_components/_pages/_portfolio/_project-cards/_card-four/cardFour";
 export default function Services() {
   return (
     <div>
@@ -10,6 +11,7 @@ export default function Services() {
         <CardsOne />
         <CardTwo />
         <CardThree />
+        <CardFour />
       </div>
     </div>
   );
