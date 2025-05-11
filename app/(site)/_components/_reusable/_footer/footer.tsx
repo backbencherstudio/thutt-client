@@ -94,16 +94,16 @@ export default function footer() {
             <Link href={"/"} className="text-[#6C6B6B] leading-[180%]">
               Home
             </Link>
-            <Link href={"/"} className="text-[#6C6B6B] leading-[180%]">
+            <Link href={"/category/new-cubicles"} className="text-[#6C6B6B] leading-[180%]">
               Category
             </Link>
-            <Link href={"/"} className="text-[#6C6B6B] leading-[180%]">
+            <Link href={"/services"} className="text-[#6C6B6B] leading-[180%]">
               Services
             </Link>
-            <Link href={"/"} className="text-[#6C6B6B] leading-[180%]">
+            <Link href={"/portfolio"} className="text-[#6C6B6B] leading-[180%]">
               Portffolio
             </Link>
-            <Link href={"/"} className="text-[#6C6B6B] leading-[180%]">
+            <Link href={"/contact"} className="text-[#6C6B6B] leading-[180%]">
               Contact
             </Link>
           </div>
@@ -113,19 +113,19 @@ export default function footer() {
             Services
           </div>
           <div className="flex flex-col items-start justify-start gap-3">
-            <Link href={"/"} className="text-[#6C6B6B] leading-[180%]">
+            <Link href={"/services"} className="text-[#6C6B6B] leading-[180%]">
               Space Planning & Design
             </Link>
-            <Link href={"/"} className="text-[#6C6B6B] leading-[180%]">
+            <Link href={"/services"} className="text-[#6C6B6B] leading-[180%]">
               Project management
             </Link>
-            <Link href={"/"} className="text-[#6C6B6B] leading-[180%]">
+            <Link href={"/services"} className="text-[#6C6B6B] leading-[180%]">
               Relocations
             </Link>
-            <Link href={"/"} className="text-[#6C6B6B] leading-[180%]">
+            <Link href={"/services"} className="text-[#6C6B6B] leading-[180%]">
               Liquidation
             </Link>
-            <Link href={"/"} className="text-[#6C6B6B] leading-[180%]">
+            <Link href={"/services"} className="text-[#6C6B6B] leading-[180%]">
               Furniture Installation
             </Link>
           </div>

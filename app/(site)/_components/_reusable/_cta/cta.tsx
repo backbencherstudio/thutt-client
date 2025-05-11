@@ -20,7 +20,7 @@ export default function cta() {
               Fill out our quick survey and receive a custom office layout plan.
             </p>
             <Link
-              href={"/"}
+              href={"/contact"}
               className={`px-6 py-2 flex items-center justify-center bg-white text-[#2B3DFF] text-[16px] sm:texxt-[18px] font-semibold lg:text-[18px] leading-[var(--paragraph-line-height)] transition-all duration-300 cursor-pointer `}
             >
               Start Syrvey
