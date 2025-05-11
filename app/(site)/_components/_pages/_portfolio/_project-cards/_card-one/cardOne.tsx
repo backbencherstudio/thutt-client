@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-export default function cardsOne() {
+export default function cardOne() {
   return (
     <div className="bg-white px-4">
       <div className="container mx-auto pb-10 sm:pb-16 md:pb-20 xl:pb-[120px]">
