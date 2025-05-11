@@ -10,17 +10,20 @@ export default function Category() {
     {
       title: "1. New Cubiclese",
       description: "Modern, modular workstations built for productivity and collaboration. Perfect for growing teams and new office setups.",
-      image: "url('/assets/site-images/home/category1.png')"
+      image: "url('/assets/site-images/home/category1.png')",
+      link: "/category/new-cubicles"
     },
     {
       title: "2. Pre-Owned Cubicles",
       description: "High-quality pre-owned workstations at affordable prices. Perfect for budget-conscious businesses.",
-      image: "url('/assets/site-images/home/category2.png')"
+      image: "url('/assets/site-images/home/category2.png')",
+      link: "/category/pre-owned-cubicles"
     },
     {
       title: "3. Office Furniture",
       description: "Tailored workspace solutions designed to meet your specific needs and requirements.",
-      image: "url('/assets/site-images/home/category3.png')"
+      image: "url('/assets/site-images/home/category3.png')",
+      link: "/category/office-furniture"
     }
   ];
 
@@ -51,7 +54,7 @@ export default function Category() {
                     <div className="inline-flex flex-col items-start justify-start gap-2 p-6">
                       <h3 className="text-white w-[500px]">{panel.title}</h3>
                       <Link
-                        href="/"
+                        href={panel.link}
                         className="inline-flex items-center gap-2 text-white border-b"
                       >
                         Explore
@@ -94,7 +97,7 @@ export default function Category() {
                   <p className="max-w-[533px] text-white pb-1">
                     {panel.description}
                   </p>
-                  <Link href="/" className="flex items-center gap-2 text-[#5564FF]">
+                  <Link href={panel.link} className="flex items-center gap-2 text-[#5564FF]">
                     Explore
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -142,7 +145,7 @@ export default function Category() {
                   <p className="text-white text-sm sm:text-base max-w-full sm:max-w-[533px] pb-1">
                     {panel.description}
                   </p>
-                  <Link href="/" className="flex items-center gap-2 text-[#5564FF] text-sm sm:text-base">
+                  <Link href={panel.link} className="flex items-center gap-2 text-[#5564FF] text-sm sm:text-base">
                     Explore
                     <svg
                       xmlns="http://www.w3.org/2000/svg"

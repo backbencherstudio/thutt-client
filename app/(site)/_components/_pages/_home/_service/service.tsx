@@ -8,35 +8,35 @@ const services = [
     title: '1. Space Planning & Design',
     description:
       'We have design experts on hand ready to help you plan your space and give you the look you want. Click to see our design process!',
-    link: '/services/space-planning',
+    link: '/services',
     image: '/assets/site-images/home/service1.png',
   },
   {
     title: '2. Project Management',
     description:
       'Our experienced project managers oversee every detail, ensuring your workspace project is delivered on time and within budget.',
-    link: '/services/project-management',
+    link: '/services',
     image: '/assets/site-images/home/service1.png',
   },
   {
     title: '3. Relocations',
     description:
       'We handle office moves with care and efficiency, minimizing downtime and ensuring a smooth transition to your new space.',
-    link: '/services/relocations',
+    link: '/services',
     image: '/assets/site-images/home/service1.png',
   },
   {
     title: '4. Liquidation',
     description:
       'We help you recover value from surplus or outdated office furniture with our professional liquidation services.',
-    link: '/services/liquidation',
+    link: '/services',
     image: '/assets/site-images/home/service1.png',
   },
   {
     title: '5. Furniture Installation',
     description:
       'Our skilled team assembles and installs your office furniture quickly and correctly, so you can get back to work.',
-    link: '/services/installation',
+    link: '/services',
     image: '/assets/site-images/home/service1.png',
   },
 ];
