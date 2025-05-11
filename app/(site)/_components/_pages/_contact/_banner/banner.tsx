@@ -6,7 +6,7 @@ export default function Banner() {
     <div
       className="bg-cover bg-center bg-no-repeat relative px-4"
       style={{
-        backgroundImage: "url('/assets/site-images/portfolio/banner.png')",
+        backgroundImage: "url('/assets/site-images/contact/banner.png')",
       }}
     >
       <div className="container mx-auto pt-20 pb-[132px]">
@@ -15,16 +15,11 @@ export default function Banner() {
             <div className="text-[#BDC3FF] text-[20px] md:text-[24px]">
               Home/
             </div>
-            <div className="text-white text-[20px] md:text-[24px]">
-              Portfolio
-            </div>
+            <div className="text-white text-[20px] md:text-[24px]">Contact</div>
           </div>
-          <h1 className="text-white">
-            Designed with Purpose. Built with Precision.
-          </h1>
+          <h1 className="text-white">Contact Us</h1>
           <div className="text-white text-[20px] md:text-[24px] font-medium mb-8 leading-[120%]">
-            Explore our curated collection of residential, commercial, and
-            bespoke furniture projects crafted to elevate living.
+            We are here to help you.
           </div>
         </div>
       </div>
