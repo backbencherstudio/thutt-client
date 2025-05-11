@@ -15,7 +15,7 @@ export default function Banner() {
             <div className="text-[#BDC3FF] text-[20px] md:text-[24px]">
               Home/
             </div>
-            <div className="text-[#BDC3FF] text-[20px] md:text-[24px]">
+            <div className="text-white text-[20px] md:text-[24px]">
               Service
             </div>
           </div>
