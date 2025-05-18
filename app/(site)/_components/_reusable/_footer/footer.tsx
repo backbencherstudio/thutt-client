@@ -182,7 +182,7 @@ export default function footer() {
       </div>
       <div className="py-8 border-t border-t-[#9DA6FF]">
         <p className="text-[#1E1D1D] text-center">
-          Copyright © GCS Group FREEDOM OFFICE FURNITURE . All rights reserved.
+          Copyright © Nation Wide Office Cubicles . All rights reserved.
         </p>
       </div>
     </div>
