@@ -10,6 +10,7 @@ import {
   SelectItem,
 } from "@/components/ui/select";
 import Image from "next/image";
+import Button from "../../../_reusable/_button/button";
 
 export default function preownedCubicles() {
   const [cubicles, setCubicles] = useState([]);
@@ -119,7 +120,7 @@ export default function preownedCubicles() {
                   height={405}
                   className="w-full h-[300px] sm:h-[405px] object-cover mb-4"
                 />
-                <div className="flex items-center gap-[2px] mb-2">
+                {/* <div className="flex items-center gap-[2px] mb-2">
                   {Array.from({ length: cubicle.rating }).map((_, i) => (
                     <svg
                       key={i}
@@ -139,16 +140,19 @@ export default function preownedCubicles() {
                       </defs>
                     </svg>
                   ))}
-                </div>
+                </div> */}
                 <div className="text-[#1D1F2C] text-[24px] leading-[120%] font-semibold mb-4">
                   {cubicle.name}
                 </div>
-                <div className="text-[#1D1F2C] text-[24px] leading-[120%] font-medium mb-1">
+                {/* <div className="text-[#1D1F2C] text-[24px] leading-[120%] font-medium mb-1">
                   {cubicle.price}
                 </div>
                 <p className="text-[#62636C]">
                   Only <span className="font-medium">{cubicle.stock}</span> Left in stock
-                </p>
+                </p> */}
+                <div className="flex items-start justify-start">
+                  <Button text="Add To Quote" href="/contact" />
+                </div>
               </div>
             ))}
           </div>
