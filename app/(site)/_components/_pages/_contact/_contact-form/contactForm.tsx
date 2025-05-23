@@ -48,6 +48,11 @@ export default function ContactForm() {
     e.preventDefault();
     setStatus(null);
 
+    const preferredContactInfo =
+      form.preferredContact === "email"
+        ? `Email: ${form.email}`
+        : `Phone: ${form.phone}`;
+
     const templateParams = {
       product: form.product || "",
       productImage: form.productImage || "",
@@ -59,6 +64,7 @@ export default function ContactForm() {
       roomSize: form.roomSize || "",
       message: form.message || "",
       preferredContact: form.preferredContact || "email",
+      preferredContactInfo,
       fileCount: files ? files.length.toString() : "0",
     };
 
