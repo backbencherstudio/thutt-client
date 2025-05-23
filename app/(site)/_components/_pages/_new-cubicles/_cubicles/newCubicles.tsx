@@ -178,7 +178,10 @@ export default function newCubicles() {
                   Only <span className="font-medium">{cubicle.stock}</span> Left in stock
                 </p> */}
                 <div className="flex items-start justify-start">
-                  <Button text="Add To Quote" href={`/contact?product=${encodeURIComponent(cubicle.name)}`} />
+                  <Button 
+                    text="Add To Quote" 
+                    href={`/contact?product=${encodeURIComponent(cubicle.name)}&productImage=${encodeURIComponent(cubicle.image)}`} 
+                  />
                 </div>
               </div>
             ))}

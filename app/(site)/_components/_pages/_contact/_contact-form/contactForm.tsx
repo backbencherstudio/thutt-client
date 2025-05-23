@@ -7,8 +7,10 @@ import emailjs from "@emailjs/browser";
 export default function ContactForm() {
   const searchParams = useSearchParams();
   const productFromQuery = searchParams.get("product") || "";
+  const productImageFromQuery = searchParams.get("productImage") || "";
   const [form, setForm] = useState({
     product: productFromQuery,
+    productImage: productImageFromQuery,
     firstName: "",
     lastName: "",
     email: "",
@@ -47,29 +49,31 @@ export default function ContactForm() {
     setStatus(null);
 
     const templateParams = {
-      product: form.product,
-      firstName: form.firstName,
-      lastName: form.lastName,
-      email: form.email,
-      phone: form.phone,
-      projectType: form.projectType,
-      roomSize: form.roomSize,
-      message: form.message,
-      preferredContact: form.preferredContact,
-      fileCount: files ? files.length : 0,
+      product: form.product || "",
+      productImage: form.productImage || "",
+      firstName: form.firstName || "",
+      lastName: form.lastName || "",
+      email: form.email || "",
+      phone: form.phone || "",
+      projectType: form.projectType || "",
+      roomSize: form.roomSize || "",
+      message: form.message || "",
+      preferredContact: form.preferredContact || "email",
+      fileCount: files ? files.length.toString() : "0",
     };
 
     try {
       await emailjs.send(
-        "service_j8jr9om", // Replace with your service ID
-        "template_jpjbfwj", // Replace with your template ID
+        "service_j8jr9om",
+        "template_jpjbfwj",
         templateParams,
-        "FO0b58GeZVQ6EYrBB" // Replace with your public key
+        "FO0b58GeZVQ6EYrBB"
       );
 
       setStatus({ type: "success", message: "Message sent successfully!" });
       setForm({
         product: "",
+        productImage: "",
         firstName: "",
         lastName: "",
         email: "",
@@ -287,6 +291,15 @@ export default function ContactForm() {
                   onChange={handleChange}
                   readOnly={!!productFromQuery}
                 />
+                {form.productImage && (
+                  <div className="mt-2">
+                    <img 
+                      src={form.productImage} 
+                      alt={form.product} 
+                      className="w-full max-w-[200px] h-auto object-cover rounded"
+                    />
+                  </div>
+                )}
               </div>
               <div className="flex flex-col gap-3 items-start justify-start p-3 bg-white border border-[#717DFF]">
                 <div className="w-full font-bold text-[18px] ">Message</div>
