@@ -26,6 +26,8 @@ export default function ContactForm() {
     message: string;
   } | null>(null);
   const fileInputRef = useRef<HTMLInputElement>(null);
+  const [loading, setLoading] = useState(false);
+  const [showSuccess, setShowSuccess] = useState(false);
 
   const handleChange = (
     e: React.ChangeEvent<
@@ -47,6 +49,7 @@ export default function ContactForm() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setStatus(null);
+    setLoading(true);
 
     const preferredContactInfo =
       form.preferredContact === "email"
@@ -75,29 +78,33 @@ export default function ContactForm() {
         templateParams,
         "FO0b58GeZVQ6EYrBB"
       );
-
-      setStatus({ type: "success", message: "Message sent successfully!" });
-      setForm({
-        product: "",
-        productImage: "",
-        firstName: "",
-        lastName: "",
-        email: "",
-        phone: "",
-        projectType: "",
-        roomSize: "",
-        message: "",
-        preferredContact: "email",
-      });
-      setFiles(null);
-      if (fileInputRef.current) fileInputRef.current.value = "";
+      setLoading(false);
+      setShowSuccess(true);
     } catch (error) {
-      console.error("EmailJS error:", error);
+      setLoading(false);
       setStatus({
         type: "error",
         message: "Failed to send message. Please try again.",
       });
     }
+  };
+
+  const handleResetForm = () => {
+    setShowSuccess(false);
+    setForm({
+      product: "",
+      productImage: "",
+      firstName: "",
+      lastName: "",
+      email: "",
+      phone: "",
+      projectType: "",
+      roomSize: "",
+      message: "",
+      preferredContact: "email",
+    });
+    setFiles(null);
+    if (fileInputRef.current) fileInputRef.current.value = "";
   };
 
   return (
@@ -353,24 +360,40 @@ export default function ContactForm() {
               </div>
               <button
                 type="submit"
-                className="w-full bg-[#2B3DFF] text-white px-4 py-2 cursor-pointer"
+                className="w-full bg-[#2B3DFF] text-white px-4 py-2 cursor-pointer flex items-center justify-center"
+                disabled={loading}
               >
-                Contact Now
+                {loading ? <span className="loader mr-2"></span> : null}
+                {loading ? "Submitting..." : "Contact Now"}
               </button>
-              {status && (
-                <div
-                  className={`w-full text-center mt-2 ${
-                    status.type === "success"
-                      ? "text-green-600"
-                      : "text-red-600"
-                  }`}
-                >
+              {status && status.type === "error" && (
+                <div className="w-full text-center mt-2 text-red-600">
                   {status.message}
                 </div>
               )}
             </div>
           </div>
         </form>
+        {showSuccess && (
+          <div
+            className="fixed inset-0 z-50 flex items-center justify-center bg-black/40"
+            onClick={handleResetForm}
+          >
+            <div
+              className="bg-white rounded-lg shadow-lg p-8 max-w-sm w-full text-center relative"
+              onClick={e => e.stopPropagation()}
+            >
+              <h2 className="text-2xl font-bold mb-4 text-[#2B3DFF]">Thank you!</h2>
+              <p className="mb-6 text-[#474747]">Your message has been sent successfully. We will get back to you soon.</p>
+              <button
+                className="bg-[#2B3DFF] text-white px-6 py-2 rounded hover:bg-[#1A1AFF] transition"
+                onClick={handleResetForm}
+              >
+                Okay
+              </button>
+            </div>
+          </div>
+        )}
       </div>
     </div>
   );
