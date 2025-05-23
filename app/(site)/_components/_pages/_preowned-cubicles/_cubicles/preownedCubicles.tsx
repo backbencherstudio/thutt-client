@@ -151,7 +151,7 @@ export default function preownedCubicles() {
                   Only <span className="font-medium">{cubicle.stock}</span> Left in stock
                 </p> */}
                 <div className="flex items-start justify-start">
-                  <Button text="Add To Quote" href="/contact" />
+                  <Button text="Add To Quote" href={`/contact?product=${encodeURIComponent(cubicle.name)}`} />
                 </div>
               </div>
             ))}

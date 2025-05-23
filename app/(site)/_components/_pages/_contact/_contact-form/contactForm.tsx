@@ -1,9 +1,14 @@
-'use client'
+"use client";
 import { Input } from "@/components/ui/input";
 import React, { useState, useRef } from "react";
+import { useSearchParams } from "next/navigation";
+import emailjs from "@emailjs/browser";
 
 export default function ContactForm() {
+  const searchParams = useSearchParams();
+  const productFromQuery = searchParams.get("product") || "";
   const [form, setForm] = useState({
+    product: productFromQuery,
     firstName: "",
     lastName: "",
     email: "",
@@ -14,26 +19,35 @@ export default function ContactForm() {
     preferredContact: "email",
   });
   const [files, setFiles] = useState<FileList | null>(null);
-  const [status, setStatus] = useState<{ type: 'success' | 'error', message: string } | null>(null);
+  const [status, setStatus] = useState<{
+    type: "success" | "error";
+    message: string;
+  } | null>(null);
   const fileInputRef = useRef<HTMLInputElement>(null);
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<
+      HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement
+    >
+  ) => {
     const { name, value, type } = e.target;
-    if (type === 'file') {
+    if (type === "file") {
       setFiles((e.target as HTMLInputElement).files);
     } else {
-      setForm(prev => ({ ...prev, [name]: value }));
+      setForm((prev) => ({ ...prev, [name]: value }));
     }
   };
 
   const handleRadioChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setForm(prev => ({ ...prev, preferredContact: e.target.value }));
+    setForm((prev) => ({ ...prev, preferredContact: e.target.value }));
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setStatus(null);
-    const templateParams: any = {
+
+    const templateParams = {
+      product: form.product,
       firstName: form.firstName,
       lastName: form.lastName,
       email: form.email,
@@ -42,13 +56,20 @@ export default function ContactForm() {
       roomSize: form.roomSize,
       message: form.message,
       preferredContact: form.preferredContact,
+      fileCount: files ? files.length : 0,
     };
-    if (files && files.length > 0) {
-      templateParams.fileCount = files.length;
-    }
+
     try {
-      setStatus({ type: 'success', message: 'Message sent successfully!' });
+      await emailjs.send(
+        "service_j8jr9om", // Replace with your service ID
+        "template_jpjbfwj", // Replace with your template ID
+        templateParams,
+        "FO0b58GeZVQ6EYrBB" // Replace with your public key
+      );
+
+      setStatus({ type: "success", message: "Message sent successfully!" });
       setForm({
+        product: "",
         firstName: "",
         lastName: "",
         email: "",
@@ -61,7 +82,11 @@ export default function ContactForm() {
       setFiles(null);
       if (fileInputRef.current) fileInputRef.current.value = "";
     } catch (error) {
-      setStatus({ type: 'error', message: 'Failed to send message. Please try again.' });
+      console.error("EmailJS error:", error);
+      setStatus({
+        type: "error",
+        message: "Failed to send message. Please try again.",
+      });
     }
   };
 
@@ -131,7 +156,9 @@ export default function ContactForm() {
             </div>
             <div className="max-w-[796px] w-full p-5 flex flex-col gap-4 bg-white border border-[#717DFF]">
               <div className="flex flex-col gap-3 items-start justify-start p-3 bg-white border border-[#717DFF]">
-                <div className="w-full font-bold text-[18px] ">Basic Information</div>
+                <div className="w-full font-bold text-[18px] ">
+                  Basic Information
+                </div>
                 <div className="flex w-full flex-col gap-3">
                   <p className="text-[16px] text-[#474747]">Full Name</p>
                   <div className="flex flex-col sm:flex-row gap-3">
@@ -183,7 +210,9 @@ export default function ContactForm() {
                 </div>
               </div>
               <div className="flex flex-col gap-3 items-start justify-start p-3 bg-white border border-[#717DFF]">
-                <div className="w-full font-bold text-[18px] ">Space Details</div>
+                <div className="w-full font-bold text-[18px] ">
+                  Space Details
+                </div>
                 <div className="flex flex-col sm:flex-row w-full gap-3">
                   <div className="w-full grid grid-cols-1 gap-3">
                     <p className="text-[16px] text-[#474747]">Project Type</p>
@@ -216,8 +245,10 @@ export default function ContactForm() {
                     </select>
                   </div>
                 </div>
-                <div className="w-full grid grid-cols-1 gap-3">
-                  <p className="text-[16px] text-[#474747]">Upload Room Photos</p>
+                {/* <div className="w-full grid grid-cols-1 gap-3">
+                  <p className="text-[16px] text-[#474747]">
+                    Upload Room Photos
+                  </p>
                   <label className="w-full px-3 py-2 flex flex-col items-center justify-center border border-[#BDC3FF] bg-[#EAECFF] h-20 cursor-pointer">
                     <input
                       type="file"
@@ -243,7 +274,19 @@ export default function ContactForm() {
                       />
                     </svg>
                   </label>
-                </div>
+                </div> */}
+              </div>
+              <div className="flex flex-col gap-3 items-start justify-start p-3 bg-white border border-[#717DFF]">
+                <div className="w-full font-bold text-[18px] ">Product</div>
+                <Input
+                  type="text"
+                  name="product"
+                  placeholder="Product name (if requesting a quote)"
+                  className="w-full h-10 px-3 py-2 bg-[#EAECFF] border border-[#BDC3FF] font-normal placeholder:text-[#6C6B6B]"
+                  value={form.product}
+                  onChange={handleChange}
+                  readOnly={!!productFromQuery}
+                />
               </div>
               <div className="flex flex-col gap-3 items-start justify-start p-3 bg-white border border-[#717DFF]">
                 <div className="w-full font-bold text-[18px] ">Message</div>
@@ -257,7 +300,9 @@ export default function ContactForm() {
                 />
               </div>
               <div className="flex flex-col gap-3 items-start justify-start p-3 bg-white border border-[#717DFF]">
-                <div className="w-full font-bold text-[18px] ">Preferred Contact Method</div>
+                <div className="w-full font-bold text-[18px] ">
+                  Preferred Contact Method
+                </div>
                 <div className="flex gap-6 w-full">
                   <label className="flex items-center gap-2">
                     <input
@@ -287,11 +332,22 @@ export default function ContactForm() {
                   </label>
                 </div>
               </div>
-              <button type="submit" className="w-full bg-[#2B3DFF] text-white px-4 py-2 cursor-pointer">
+              <button
+                type="submit"
+                className="w-full bg-[#2B3DFF] text-white px-4 py-2 cursor-pointer"
+              >
                 Contact Now
               </button>
               {status && (
-                <div className={`w-full text-center mt-2 ${status.type === 'success' ? 'text-green-600' : 'text-red-600'}`}>{status.message}</div>
+                <div
+                  className={`w-full text-center mt-2 ${
+                    status.type === "success"
+                      ? "text-green-600"
+                      : "text-red-600"
+                  }`}
+                >
+                  {status.message}
+                </div>
               )}
             </div>
           </div>
