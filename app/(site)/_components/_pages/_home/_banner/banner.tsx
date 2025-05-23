@@ -16,7 +16,7 @@ export default function Banner() {
           <p className="text-white text-[20px] font-medium mb-8">
             Explore new & pre-owned office cubicles and furniture solutions
           </p>
-          <Button text="Browse Cubicles" href="/new-cubicles" />
+          <Button text="Browse Cubicles" href="/category/new-cubicles" />
         </div>
       </div>
     </div>
