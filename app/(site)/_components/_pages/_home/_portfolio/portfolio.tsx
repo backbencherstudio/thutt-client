@@ -27,7 +27,7 @@ export default function portfolio() {
                     <Image
                       src="/assets/logo.png"
                       alt="brand logo"
-                      width={64}
+                      width={84}
                       height={20}
                       className="max-w-[64px] max-h-[20px]"
                     />
