@@ -14,7 +14,7 @@ export default function footer() {
                 <Image
                   src="/assets/logo.png"
                   alt="Brand Logo"
-                  width={128}
+                  width={148}
                   height={40}
                   className="w-full h-full"
                 />
